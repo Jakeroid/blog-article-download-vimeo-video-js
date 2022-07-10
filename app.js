@@ -47,7 +47,7 @@ const main = async () => {
     const videoQualityItems = videoConfig.request.files.progressive;
 
     // selecting the best video quality based on height and width
-    // you could also FPS multiplication to get the best quality based on FPS too
+    // you could also add FPS multiplication to get the best quality based on FPS too
     const targetItem = videoQualityItems.reduce((prev, curr) => {
         return prev.width * prev.height > curr.width * curr.height ? prev : curr;
     });
